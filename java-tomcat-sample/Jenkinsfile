@@ -4,7 +4,6 @@ pipeline {
             stage('Init') {
                   steps {
                         echo 'Hi, this is Prasanna Jadhav'
-                        echo 'We are in main branch'
                   }
             }
             stage('Build') {
