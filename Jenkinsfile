@@ -16,9 +16,15 @@ pipeline {
                         echo "Testing a few cases"
                   }
             }
+             stage('QA') {
+                  steps {
+                        echo "QA Testing a few cases"
+                  }
+            }
             stage('Deployment') {
                   steps {
                         echo "Deploying in Deployment Area"
                   }
             }
       }
+}
