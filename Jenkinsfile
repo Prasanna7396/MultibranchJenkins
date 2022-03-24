@@ -4,7 +4,6 @@ pipeline {
             stage('Init') {
                   steps {
                         echo 'Hi, this is Prasanna Jadhav'
-                        echo 'We are Starting the Testing'
                   }
             }
             stage('Build') {
@@ -13,11 +12,17 @@ pipeline {
                   }
             }
             stage('Deploy in staging') {
+
                   steps {
                         echo "Testing a few cases"
                   }
             }
-            stage('Deploy in Prod') {
+             stage('QA') {
+                  steps {
+                        echo "QA Testing a few cases"
+                  }
+            }
+            stage('Deployment') {
                   steps {
                         echo "Deploying in Deployment Area"
                   }
