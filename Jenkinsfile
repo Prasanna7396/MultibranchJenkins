@@ -3,7 +3,12 @@ pipeline {
       stages {
             stage('Init') {
                   steps {
-                        echo 'Hi, this is Prasanna Jadhav'
+                         script {
+                            properties([pipelineTriggers([pollSCM('H/1 * * * *')])])
+                         }
+                         git branch: 'feature2', url: 'https://github.com/Prasanna7396/MultibranchJenkins.git'
+                        
+                         echo 'Hi, this is Prasanna Jadhav'
                   }
             }
             stage('Build') {
