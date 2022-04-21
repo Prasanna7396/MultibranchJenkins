@@ -7,7 +7,7 @@ pipeline {
                         }
                         git branch: 'feature1', url: 'https://github.com/Prasanna7396/MultibranchJenkins.git'                  
                         steps {
-                              echo 'Hi, this is Prasanna Jadhav'
+                              echo 'Hi, this is Prasanna'
                   }
             }
             stage('Build') {
